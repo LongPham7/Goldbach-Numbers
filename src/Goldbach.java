@@ -26,35 +26,17 @@ public class Goldbach {
 	private GraphFrame graph = new GraphFrame();
 	private AppFrame app = new AppFrame(graph);
 
-	/*
-	 * This method is executed in the beginning of the program, and creates an
-	 * object of class Goldbach.
-	 */
 	public static void main(String[] args) {
 		Goldbach gui = new Goldbach();
 		gui.activate();
 	}
 
-	/*
-	 * This method reads the file of prime numbers, and stores it in the array
-	 * "prime." After that, this method creates a new window to display the list of
-	 * multiplicity of Goldbach numbers and the list of gaps between non-unique
-	 * sums.
-	 * 
-	 * Precondition: - A file of prime numbers has already been imported.
-	 * Postcondition: - The array "prime" is filled. - A JFrame with specified
-	 * components is displayed.
-	 */
 	public void activate() {
-		/*
-		 * Traverse the file of prime numbers, and extract them from the file, storing
-		 * them in an array.
-		 */
 		try {
 			app.readInPrime();
 			app.activate();
 		} catch (Exception ex) {
-			System.out.println("Error");
+			System.out.println("Error occurred in reading in a file.");
 		}
 	}
 

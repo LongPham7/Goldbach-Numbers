@@ -2,6 +2,10 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
+/** 
+ * This class corresponds to a view in the MVC architecture. It creates a GUI
+ * to display a graph of multiplicities.  
+ * */
 public class GraphFrame {
 	
     private JFrame frame = new JFrame("Graph of Multiplicity");
@@ -14,7 +18,8 @@ public class GraphFrame {
 		frame.setVisible(true);
 	}
 	
+	// Updates/initialises the data points.
 	public void setData(int[] data) {
-		graph.sample = data;
+		graph.setData(data);
 	}
 }
